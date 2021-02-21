@@ -2,22 +2,66 @@
 font-family: 'Montserrat', sans-serif;
 font-family: 'Open Sans', sans-serif;
 */
-body #myBooks h1 {
-	font-family: Montesserat, sans serif;
-	color: #494949;
+
+/*#myBooks {
+	text-align: center;
+  }*/
+
+#myBooks,#addbookButton,#content,.book-list {
+  text-align: center;
+}
+
+#myBooks h1 {
+	font-family: Open Sans, sans serif;
+	color: #949494;
 	
   }
-  
-  * {
-	text-align: center;
-  }
-  
-  header #logopochlib {
-	margin: 100px, 0, 3px, 0;
+
+#myBooks h2 {
+  font-family: Lato, sans serif;
+  font-weight: bold;
+  font-weight: lighter;
+}
+
+ img.HeaderLogo {
+    width: 30%;
+    display: block;
+    margin: auto;
+    
   }
 
-  .hidden {
+ .title {
+   border: 1px solid #EDF1F4;
+   background-color: #EDF1F4;
+   box-shadow: 3px 3px 0px #e0e0e0;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.hidden {
     display: none;
+    
   }
-  
-  
+
+#addbookButton {
+background-color: #21A89D;
+color: ivory;
+font-size: 90%;
+border-radius: 3px 3px 3px 3px;
+box-shadow:  #21A89D;
+border-color: #21A89D;
+  }
+
+.book-list {
+  margin-top: 50px;
+  visibility: hidden;
+}
+
+form, #searchButton, #deletedButton, label {
+  display: block;
+  width: 150px;
+	float:left;
+}
+
+#bookTitle, # {
+  float: left;
+}

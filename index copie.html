@@ -8,8 +8,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
   	</head>
   <header>
-    <div id='logopochlib'>
-      <img src='./assets/logo/logo.png' alt='pochlib logo'/>
+    <div  id='logopochlib'>
+      <img class='HeaderLogo' src='./assets/logo/logo01.png' alt='pochlib logo'/>
       </div>
     </header>
   	<body>
@@ -20,32 +20,23 @@
 				<input 
 					class="addbook"
 					type="button"
-					value="Ajouter un Livre">
+					value="Ajouter un Livre"
+					id="addbookButton">
 			</div>
 			<hr>
 			<div id="content">
 				<h2>Ma poch'liste</h2>
 			</div>
-
-			<form class="form-container hidden" method='post' action='' id = 'form'>
-					 
-					 <label for='booktitle'>Titre du livre : </label>
-					 <input type="text" name="booktitle" id="bookTitle" required><br>
-
-					 <label for="author">Auteur : </label>
-					 <input type="text" name="author" id="author" required><br>
-
-					 <input type="submit" value="Rechercher" id="searchButton"/><br>
-
-					 <input type="reset" value="Annuler" id="deletedButton" /> 
-
-			</form>
-			<!--
+		
 			<div class='book-list'>
+				<h2 class='text-text'>Résultats de recherche</h2>
 				<div id="list-output" class="">
-					<div class="row">∏pppp
-			-->
+					<div class="row">
+						<!-- card -->
+						</div>
 		</div>
+
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="./assets/js/addbook.js"></script>
 		<script src="./assets/js/googleapirequest.js"></script>

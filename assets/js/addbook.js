@@ -1,12 +1,24 @@
-const showForm = () => {
-    const myForm = document.querySelector('.form-container');
-    console.log(myForm);
-    myForm.classList.remove('hidden'); 
-};
+$(document).ready(function(){
+    $(".addbook").on('click', function() {
+        $(this).after("<form class='form-container' method='post' action='' id='form'>" +
+					 
+            "<label for='booktitle'>Titre du livre : </label>" +
+            "<input type='text' name='booktitle' id='bookTitle' required /><br/>" +
 
-const addbook = document.querySelector('.addbook');
+            "<label for='author'>Auteur : </label>" +
+            "<input type='text' name='author' id='author' required /><br/>" +
 
-addbook.addEventListener('click', showForm);
+            "<input type='submit' value='Rechercher' id='searchButton'/><br/> " +
+
+            "<input type='reset' value='Annuler' id='deletedButton'/>" +
+            
+            "</form>"
+        
+            );
+        $(this).addClass("hidden");
+    });
+});
+
 
 /*//vérifier la présence d'une valeur 
 var formValid = document.getElementById('searchButton');
@@ -32,5 +44,7 @@ function validation(event){
         missAuthor.style.color = 'red';
 
     }*/
+
+
 
 
