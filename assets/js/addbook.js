@@ -13,10 +13,18 @@ $(document).ready(function(){
             "<input type='reset' value='Annuler' id='deletedButton'/>" +
             
             "</form>"
-        
             );
-        $(this).addClass("hidden");
+
+            $(this).addClass("hidden");
     });
+    $("body").on('click', '#deletedButton', function(){
+        $(".addbook").removeClass("hidden");
+
+        $("#form").remove();
+
+    })
+    
+
 });
 
 

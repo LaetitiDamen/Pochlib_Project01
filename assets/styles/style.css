@@ -34,7 +34,7 @@ font-family: 'Open Sans', sans-serif;
    border: 1px solid #EDF1F4;
    background-color: #EDF1F4;
    box-shadow: 3px 3px 0px #e0e0e0;
-  border-radius: 3px 3px 3px 3px;
+   border-radius: 3px 3px 3px 3px;
 }
 
 .hidden {
@@ -56,12 +56,35 @@ border-color: #21A89D;
   visibility: hidden;
 }
 
-form, #searchButton, #deletedButton, label {
+ #searchButton, #deletedButton, label {
   display: block;
   width: 150px;
-	float:left;
+	
 }
 
-#bookTitle, # {
-  float: left;
+/*form {
+  position: absolute;
+  margin-top: 120px;
+}*/
+
+#searchButton {
+  background-color:  #21A89D;
+  border-radius: 3px 3px 3px 3px;
+  color: ivory;
+}
+
+#deletedButton{
+  background-color: #DF594F;
+  border-radius: 3px 3px 3px 3px;
+  color: ivory;
+}
+
+.form-container{
+  display: inline-block;
+  width: 100%;
+
+}
+
+#bookTitle, #author {
+  width: 100%;
 }
