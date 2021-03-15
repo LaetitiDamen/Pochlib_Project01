@@ -88,3 +88,11 @@ border-color: #21A89D;
 #bookTitle, #author {
   width: 100%;
 }
+
+#deletedButton, #searchButton, label {
+margin-top: 10px;
+}
+
+label {
+  text-align: left;
+}
