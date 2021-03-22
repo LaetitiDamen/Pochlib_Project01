@@ -96,3 +96,21 @@ margin-top: 10px;
 label {
   text-align: left;
 }
+
+.container-card {  
+  width: 45%;
+  align-self: stretch;
+   margin-bottom: 20px;
+}
+
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+}
+
+.far-bookmark {
+   size: 20px;
+   position:-ms-page
+}

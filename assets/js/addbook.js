@@ -21,11 +21,13 @@ $(document).ready(function(){
         $(".addbook").removeClass("hidden");
 
         $("#form").remove();
-
+            
     })
+    $("body").on('click', '#deletedButton', function(){
     
+        $("#result-content").remove(); 
+    })  
     
-
 });
 
 

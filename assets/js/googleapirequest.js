@@ -2,6 +2,7 @@ $(document).ready(function(){
     
     $("body").on('click', '#searchButton', function(e){
         e.preventDefault();
+        $(".card-section").removeClass("hidden");
         var booktitle = $('#bookTitle').val();
         var author = $('#author').val();
         const apiKey = "AIzaSyCjGratA-X9f0duOAfVwZt2NmvmRs22Bz8";
@@ -18,32 +19,48 @@ $(document).ready(function(){
 
                 $("#myBooks div:first").after("<div id='result-content'>" +
                         "<hr>" +
+                        "<h2>Résultats de recherche</h2>" +
+                        "<section class='card-section'></section>" +
                         "</div>");
 
                 $.each(data.items, function(i, obj){
+                
                     var id = obj.id;
                     var title = obj.volumeInfo.title;
-                    var author = obj.volumeInfo.author;
+                    var authors = obj.volumeInfo.authors;
                     var description = obj.searchInfo.textSnippet;
                     var image = "assets/logo/unavailable.png";
 
+
                     if (obj.volumeInfo.hasOwnProperty('imageLinks') && obj.volumeInfo.imageLinks.hasOwnProperty('thumbnail')){
                         image = obj.volumeInfo.imageLinks.thumbnail; 
+
+                    if(data === true) {
+                        $('#result-content').show();
+                    } else if (data === false) {
+                            alert("Aucun livre n'a été trouvé !");
+                        }
                     }
 
-                        $("#result-content").after(
-                        "<div class='card'>" +
-                            "<img class='card-img-top img-fluid img-thumbnail' src='"+ image +"'  alt='Card image top'>" +
-                            "<div class='card-body'>"+
-                                "<h3 class='card-title'>"+ title + "</h3> " +
-                                "<h4 class='card-id'>" + id + "</h4>" +
-                                "<h2 class='card-author'>" + author + "</h2>" +
-                                "<p class='card-text'>" + description + "</p>" +
-                            "</div>"+
+                        $(".card-section").append(
+                        "<div class='container-card'>" +
+                                "<div class='card'>" +
+                                    "<img class='card-img-bottom img-fluid img-thumbnail' src='"+ image +"'  alt='Card image top'>" +
+                                    "<div class='card-body'>"+
+                                    "<h3 class='card-title'>"+ title + "</h3> " +
+                                    "<h4 class='card-id'>" + id + "</h4>" +
+                                    "<h2 class='card-author'>" + authors + "</h2>" +
+                                    "<p class='card-text'>" + description + "</p>" +
+                                    "<i class='far fa-bookmark'></i>" +
+                                     "</div>"+
+                                     "</div>"+
+                               
                         "</div>");
-                
-
+                        
+                   
                     });
+            
+                
 
                     console.log(id);
                 }
