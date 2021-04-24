@@ -1,16 +1,38 @@
+header {
+background-image:url(/assets/logo/header.jpeg) ; 
+width: auto;
+max-height: 200px
+}
+
+body {
+  font-family: 'Archivo Black', sans-serif;
+}
+h1, h2{
+ font-family: 'Archivo Black', sans-serif;
+}
+
+#logopochlib{
+  visibility: hidden;
+}
 
 #myBooks,#addbookButton,#content,.book-list {
   text-align: center;
 }
 
 #myBooks h1 {
-	font-family: Open Sans, sans serif;
-	color: #949494;
-	
-  }
+  font-family:  'Lora', serif;;
+  color: #111; 
+    /*font-family: 'Archivo Black', sans-serif;*/
+    font-size: 55px; 
+    font-weight: 400; 
+    line-height: 64px; 
+    margin: 0 0 20px; 
+    text-align: center; 
+    *text-transform: uppercase; 
+}
 
 #myBooks h2 {
-  font-family: Lato, sans serif;
+  /*font-family: 'lato';*/
   font-weight: bold;
   font-weight: lighter;
 }
@@ -23,25 +45,33 @@
   }
 
  .title {
-   border: 1px solid #EDF1F4;
-   background-color: #EDF1F4;
-   box-shadow: 3px 3px 0px #e0e0e0;
-   border-radius: 3px 3px 3px 3px;
+   border: 1px solid #f0f5f9;
+   background-color: transparent;
+   font-family:  'Lora', serif;
+   /*box-shadow: 3px 3px 0px #e0e0e0;*/
+   /*border-radius: 3px 3px 3px 3px;*/
 }
 
 .hidden {
     display: none;
-    
   }
 
 #addbookButton {
+  border: none;
+  width: 150px;
+  height: 35px;
 background-color: #21A89D;
 color: ivory;
 font-size: 90%;
 border-radius: 3px 3px 3px 3px;
 box-shadow:  #21A89D;
 border-color: #21A89D;
-  }
+}
+
+#addbookButton:hover{
+  background-color: #00759D;
+  outline: transparent;
+}
 
 .book-list {
   margin-top: 50px;
@@ -50,31 +80,44 @@ border-color: #21A89D;
 
  #searchButton, #deletedButton, label {
   display: block;
-  width: 150px;
-	
+  width: 150px;	
 }
-
-/*form {
-  position: absolute;
-  margin-top: 120px;
-}*/
 
 #searchButton {
-  background-color:  #21A89D;
+  border: none;
+  width: 150px;
+  height: 35px;
+  background-color:  #21a89d;
   border-radius: 3px 3px 3px 3px;
   color: ivory;
+  outline: transparent;
 }
 
+#searchButton:hover {
+  background-color: #00759D;
+  outline: transparent;
+}
+
+
 #deletedButton{
+  border: none;
+  width: 150px;
+  height: 35px;
   background-color: #DF594F;
   border-radius: 3px 3px 3px 3px;
   color: ivory;
+  margin-top: 0%;
+}
+
+#deletedButton:hover {
+  background-color: #DE274F;
+  outline: transparent;
 }
 
 .form-container{
   display: inline-block;
   width: 100%;
-
+  text-align: left;
 }
 
 #bookTitle, #author {
@@ -99,11 +142,13 @@ label {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  
 }
 
+.card-body, h1{
+  background-color:#f0efeb;
+}
 
-.far-bookmark {
+.far{
    size: 20px;
    position:-ms-page
 }
