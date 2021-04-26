@@ -27,6 +27,13 @@ h1, h2 {
 		font-weight: lighter;
 	}
 }
+img {
+	&.HeaderLogo {
+		width: 30%;
+		display: block;
+		margin: auto;
+	}
+}
 .title {
 	border: 1px solid #f0f5f9;
 	background-color: transparent;
@@ -102,8 +109,6 @@ label {
 }
 .container-card {
     width: 45%;
-    -ms-flex-item-align: stretch;
-    -ms-grid-row-align: stretch;
 	align-self: stretch;
 	margin-bottom: 20px;
 }

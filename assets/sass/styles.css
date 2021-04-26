@@ -119,9 +119,7 @@ label {
 
 .container-card {
   width: 45%;
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
+  align-self: stretch;
   margin-bottom: 20px;
   
 }
