@@ -1,10 +1,6 @@
-header {
-	background-image: url(/assets/logo/header.jpeg);
-	width: auto;
-	max-height: 200px;
-}
 body {
-	font-family: 'Archivo Black', sans-serif;
+    font-family: 'Archivo Black', sans-serif;
+    margin: 0px;
 }
 h1, h2 {
 	font-family: 'Archivo Black', sans-serif;
@@ -29,13 +25,6 @@ h1, h2 {
 	h2 {
 		font-weight: bold;
 		font-weight: lighter;
-	}
-}
-img {
-	&.HeaderLogo {
-		width: 30%;
-		display: block;
-		margin: auto;
 	}
 }
 .title {
@@ -98,7 +87,9 @@ img {
 .form-container {
 	display: inline-block;
 	width: 100%;
-	text-align: left;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 #bookTitle, #author {
 	width: 100%;
@@ -110,19 +101,63 @@ label {
 	text-align: left;
 }
 .container-card {
-	width: 45%;
+    width: 45%;
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
 	align-self: stretch;
 	margin-bottom: 20px;
 }
 .card-section {
-	display: flex;
-	flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
 	justify-content: space-evenly;
 }
 .card-body, h1 {
-	background-color: #f0efeb;
+    background-color: #f0efeb;
 }
-.far-bookmark {
-	size: 20px;
-	position: -ms-page;
+#bookmark-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
 }
+    
+.fa {
+        right: 0;
+        position: absolute;
+        top: 0;
+        font-size: 20px;
+        padding-right: 10px;
+        padding-top: 10px;
+}
+.card {
+    position: relative;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .card-section {
+      display: flex;
+  
+      /* contexte sur le parent */
+      flex-direction: column;
+  
+      /* direction d'affichage verticale */
+      align-items: center;
+  
+      /* alignement vertical */
+    }
+  
+    .container-card {
+      margin: 0 auto;
+    }
+  }
+      
