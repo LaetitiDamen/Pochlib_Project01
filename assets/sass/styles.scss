@@ -136,7 +136,7 @@ label {
     justify-content: space-evenly;
 }
     
-.fa {
+.fa, .far {
         right: 0;
         position: absolute;
         top: 0;
@@ -160,9 +160,23 @@ label {
   
       /* alignement vertical */
     }
-  
+    #bookmark-content {
+        display: flex;
+    
+        /* contexte sur le parent */
+        flex-direction: column;
+    
+        /* direction d'affichage verticale */
+        align-items: center;
+    
+        /* alignement vertical */
+      }
     .container-card {
+      width:100%;
       margin: 0 auto;
+      
     }
+
+    
   }
       

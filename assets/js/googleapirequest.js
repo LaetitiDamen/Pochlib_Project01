@@ -55,13 +55,13 @@ $(document).ready(function () {
             $(".card-section").append(
                 "<div class='container-card'>" +
                 "<div class='card'>" +
-                "<img class='card-img-bottom img-fluid img-thumbnail' src='" + book.image + "'  alt='Card image top'>" +
                 "<div class='card-body'>" +
                 "<h3 class='card-title'>" + book.title + "</h3> " +
                 "<h2 class='card-author'>" + book.authors + "</h2>" +
                 "<p class='id-book'>" + book.id + "</p>" +
                 "<p class='card-text'>" + book.description + "</p>" +
                 "<div id='addbookmark' data-id= '" + book.id + "' ><i class='far fa-bookmark'></i></div>" +
+                "<img class='card-img-bottom img-fluid img-thumbnail' src='" + book.image + "'  alt='Card image top'>" +
                 "</div>" +
                 "</div>" +
                 "</div>");
